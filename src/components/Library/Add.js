@@ -41,6 +41,7 @@ const Add = (props) => {
         }
     }
 
+    
 
     return(
         <Modal show={props.isShowAdd} onHide={handleClose}>

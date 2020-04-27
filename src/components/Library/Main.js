@@ -5,6 +5,8 @@ import {getBookList} from './../../action/library'
 
 import List from './List'
 import Add from './Add'
+import Delete from './Delete'
+import Edit from './Edit'
 
 const Main = (props) => {
 
@@ -15,6 +17,10 @@ const Main = (props) => {
 
     return(
      <div>   
+         <div className="d-flex justify-content-end">
+         
+         </div>
+         
         <table className="table table-dark">
             <thead>
                 <tr>
@@ -32,6 +38,8 @@ const Main = (props) => {
             </tbody>
         </table>
         <Add/>
+        <Delete/>
+        <Edit/>
     </div>
     
     )

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import Icon from "./../images/book.png";
+import Logo from "./../images/book2.png";
 
 import { getBook } from "../action/BookList";
 
@@ -10,9 +10,9 @@ const Home = (props) => {
   }, []);
 
   let show = props.data.map((item, index) => (
-    <div key={index} className="row">
+    <div key={index} className="col ml-2 mr-2 mt-5 mb-5">
       <div className="card" style={{ width: "18rem" }}>
-        <img src={Icon} className="card-img-top" alt="..." />
+        <img  src={Logo} className="card-img-top" alt="..." />
         <div className="card-body">
           <h5 className="card-title">{item.bookTitle}</h5>
             <ul className="card-text">
@@ -28,8 +28,8 @@ const Home = (props) => {
   ));
 
   return (
-    <div className="container">
-      <div className="row">{show}</div>
+    <div className="container mt-5">
+      <div className="row d-flex justify-content-around">{show}</div>
     </div>
   );
 };
